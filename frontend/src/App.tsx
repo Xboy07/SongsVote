@@ -70,7 +70,7 @@ function App() {
         </main>
         
         <footer className="bg-lofi-brown/10 py-8">
-          <div className="container mx-auto px-4 text-center text-lofi-dark">
+          <div className="container mx-auto px-4 text-center text-lofi-dark text-xs">
             <p>© Developed by Xboy</p>
           </div>
         </footer>
