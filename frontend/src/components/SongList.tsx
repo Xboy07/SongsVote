@@ -38,11 +38,31 @@ const SongList: React.FC = () => {
     fetchSongs();
   };
 
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-[400px]">
+        <div className="animate-pulse">Loading songs...</div>
+      </div>
+    );
+  }
+
+  if (songs.length === 0) {
+    return (
+      <div className="text-center text-lofi-dark/70">
+        No songs available yet
+      </div>
+    );
+  }
+
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="flex flex-col gap-6">
-        {!isLoading && songs.map((song) => (
-          <SongCard key={song.id} song={song} onVote={handleVote} />
+        {songs.map((song) => (
+          <SongCard 
+            key={song.id} 
+            song={song} 
+            onVote={() => handleVote(song.id)}
+          />
         ))}
       </div>
     </div>

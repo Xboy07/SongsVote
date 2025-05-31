@@ -23,7 +23,7 @@ interface ShareModalProps {
 const ShareModal: React.FC<ShareModalProps> = ({ isOpen, closeModal, song }) => {
   const [isCopied, setIsCopied] = useState(false);
   
-  const shareUrl = `${window.location.origin}/song/${song.id}`;
+  const shareUrl = `${window.location.origin}`;
   const shareTitle = `Vote for "${song.title}" by ${song.artist} on Harmonic Vote!`;
   
   const handleCopyLink = () => {
