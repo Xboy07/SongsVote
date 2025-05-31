@@ -3,6 +3,9 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import songRoutes from './routes/songRoutes';
 import adminRoutes from './routes/adminRoutes';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
